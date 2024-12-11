@@ -55,7 +55,7 @@ body {
   display: inline-block;
 }
 .navbar-collapse .navbar-nav > li > a {
-  padding: 20px 30px;
+  padding: 20px 60px;
 }
 .dropdown ul.dropdown-menu {
   top: 85%;
@@ -366,14 +366,14 @@ img {
   font-size: 0.8125rem;
 }
 .featured h3 {
-  font-weight: bold;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 24px;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  line-height: 1.4em;
-  vertical-align: middle;
-  margin: 0 0 25px 0;
+    font-weight: bold;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    line-height: 1.4em;
+    vertical-align: middle;
+    margin: 0 0 25px 0;
 }
 /* Section - Recent works */
 .thumbnails {
@@ -839,4 +839,3 @@ footer.entry-meta .meta-in {
 .team_member a:hover span {
     color: #05b4a3; /* 鼠标悬停效果 */
 }
-
