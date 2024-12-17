@@ -61,29 +61,46 @@
 
 
 <main id="main">
-
 	<div class="container">
-		<div class="row topspace">
-			<div class="col-sm-8 col-sm-offset-2">
-															
-			  <article class="post">
-					<header class="entry-header">
+
+	<div class="row topspace">
+      <!-- Sidebar -->
+      <aside class="col-sm-2 sidebar sidebar-right col-lg-3">
+        <ul class="nav text-right nav-side" id="tab-nav">
+          <li class="active" data-tab="ui"><a href="#ui">信号分析与处理</a></li>
+          <li data-tab="frontend"><a href="#frontend">深度学习</a></li>
+          <li data-tab="backend"><a href="#backend">class3</a></li>
+          <li data-tab="projects"><a href="#projects">class4</a></li>
+        </ul>
+      </aside>
+      <!-- /Sidebar -->
+
+      <!-- Article main content -->
+        <div id="ui" class="tab-content active">
+			<article class="col-sm-8 maincontent">
+				<header class="entry-header">
 						<div class="entry-meta"> 
-							<span class="posted-on"><time class="entry-date published" date="2013-09-27"></time>
-							2021-2022 /春学期 </span>			
-						</div>
+							<span class="posted-on"><time class="entry-date published" date="2013-06-17"></time>
+ 							2021-2022 /春学期</span>
+												</div>
 						<h1 class="entry-title"><a href="single.html" rel="bookmark">信号分析与处理</a></h1>
-					</header>
-					<div class="entry-content">52课时 /3.0学分 /sd01721720</div>
-				</article>
- 				
- 				<article class="post">
+							</header>
+
+		  			<div class="entry-content"> 
+						<p><img alt="" src="assets/images/mac.jpg"></p>
+						<p>52课时 /3.0学分 /sd01721720</p>
+					</div> 
+			</article>
+		</div>
+		
+ 		<div id="frontend" class="tab-content">
+ 				<article class="col-sm-8 maincontent">
 					<header class="entry-header">
  						<div class="entry-meta"> 
  							<span class="posted-on"><time class="entry-date published" date="2013-06-17"></time>
  							2022-2023 /秋学期</span>			
  						</div> 
- 						<h1 class="entry-title"><a href="single.html" rel="bookmark">Deep Learning for lmageVideo Processing and Beyond </a></h1>
+ 						<h1 class="entry-title"><a href="single.html" rel="bookmark">Deep Learning for ImageVideo Processing and Beyond </a></h1>
 					</header> 
 					<div class="entry-content"> 
 						<p><img alt="" src="assets/images/mac.jpg"></p>
@@ -91,37 +108,60 @@
 					</div> 
 				</article><!-- #post-## -->
 											
-				<article class="post">
-				  <header class="entry-header">
- 						<div class="entry-meta"> 
-					  <span class="posted-on"><time class="entry-date published" date="2013-06-17"></time></span></div>
-					</header>
-				</article>
-				<article class="post">
-				  <div class="entry-content">
-				    </div>
-				</article><!-- #post-## --> 
+	
+	  </div>
+	</div>	<!-- /container -->
+	
+	<div class="container">
+		<div class="row topspace">
+			<div class="col-sm-8 col-sm-offset-2">
+															
+			  
 			</div> 
 		</div>
 
-		<center class="">
-			<ul class="pagination">
-				<li class="disabled"><a href="">&laquo;</a></li>
-				<li class="active"><a href="">1</a></li>
-				<li><a href="">2</a></li>
-				<li><a href="">3</a></li>
-				<li><a href="">4</a></li>
-				<li><a href="">5</a></li>
-				<li><a href="">6</a></li>
-				<li><a href="">&raquo;</a></li>
-			</ul>
-		</center>
+		
 	
 
 	</div>	<!-- /container -->
 
 </main>
+	
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const navItems = document.querySelectorAll("#tab-nav li");
+    const contents = document.querySelectorAll(".tab-content");
 
+    navItems.forEach((item) => {
+      item.addEventListener("click", (event) => {
+        event.preventDefault();
+
+        // Remove active class from all tabs and contents
+        navItems.forEach((nav) => nav.classList.remove("active"));
+        contents.forEach((content) => content.classList.remove("active"));
+
+        // Add active class to the clicked tab and corresponding content
+        item.classList.add("active");
+        const tabId = item.getAttribute("data-tab");
+        document.getElementById(tabId).classList.add("active");
+      });
+    });
+  });
+</script>
+
+<style>
+  /* Add basic styles */
+  .tab-content {
+    display: none;
+  }
+  .tab-content.active {
+    display: block;
+  }
+  .nav-side li.active a {
+    font-weight: bold;
+    color: #D60002; 
+  }
+</style>
 <footer id="underfooter">
 	<div class="container">
 		<div class="row">
